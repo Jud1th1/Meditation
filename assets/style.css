@@ -134,11 +134,10 @@ hr{
 
 .search-container{
   position: relative;
-  margin: auto;
   padding: 0 1em;
   width: 100%;
   max-width: 500px;
-  margin-bottom: 20px;
+  margin: 20px 0 20px;
 }
 
 input[type=text] {
@@ -154,13 +153,13 @@ input::placeholder{
   color: #474747;
 }
 
-.search-container button {
+.search-container button{
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 0;
   height: 100%;
   width: 50px;
-  background-color: var(--secondary-color);
+  background-color: transparent;
   border: none;
   cursor: pointer;
   display: flex;
@@ -180,15 +179,13 @@ input::placeholder{
 
 /*Recommended Video Section*/
 .swiper{
-  height: 300px;
+  height: 300px !important;
+  overflow: hidden;
 } 
 
-.swiper-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-} 
+.swiper-slide {
+  width: 140px;
+}
 
 .video__img{
   width: 100%;
@@ -215,24 +212,17 @@ input::placeholder{
   top: 110px;
 }
 
-/* Need to fix hover */
-.swiper > .swiper-button-next:hover{
--webkit-box-shadow:0px 0px 51px 2px rgba(235,245,242,0.9);
--moz-box-shadow: 0px 0px 51px 2px rgba(235,245,242,0.9);
-box-shadow: 0px 0px 51px 2px rgba(235,245,242,0.9);
-}
-
 .play__btn {
   position: absolute;
-  top: 2%;
-  right: 2%;
-  background-image: url("./svg/button.svg");
+  top: 25%;
+  right: 30%;
+  background-image: url('/assets/svg/button.svg');
   background-size: contain;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   opacity: 0.8;
-  z-index: 2;
+  z-index: 5;
 }
 
 .play__btn:hover, 
@@ -242,44 +232,22 @@ box-shadow: 0px 0px 51px 2px rgba(235,245,242,0.9);
   transform: scale(1.1);
 } 
 
-/* .playbtn2{
+.playbtn2{
   position: absolute;
   width: 50px;
   height: 50px;
-  top: 10%;
-  left: 110%;
+  bottom: -7%;
+  left: 60%;
   border-radius: 50%;
-  background-image: url("./svg/button.svg");
+  background-image: url('/assets/svg/button.svg');
   background-size: contain;
   z-index: 1;
-} */
+} 
 
-/* 
 .playbtn2:hover {
   opacity: 1;
   cursor: pointer;
-} */
-
-
-/* .video__data {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-} */
-
-/*Video Btn*/
-/* video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
- */
-
+} 
 
 /*Affirmation Section*/
 .affirmation_container{
@@ -299,11 +267,11 @@ box-shadow: 0px 0px 51px 2px rgba(235,245,242,0.9);
 .playlist{
   font-weight: 800;
 }
-/* 
-h3{
+
+.playlist_para{
   color: white;
 }
- */
+ 
 /*========== VideoPage ==========*/
 .window {
   width: 100vw;
