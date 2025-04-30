@@ -111,6 +111,62 @@ hr{
                 HomePage
   =====================================*/
 
+  .toggle_btn {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 9px;
+    padding: 8px;
+  }
+  
+  .app {
+    --transition-duration: 400ms;
+    --text: #ffffff;
+  }
+  
+  .app.dark {
+    --bg: #333;
+    --text: white;
+  }
+  
+  .app {
+    position: absolute;
+    top: 5%;
+    right: 25%;
+    /* transition: color, background-color var(--transition-duration); */
+  }
+  
+  .app svg {
+    transition: stroke var(--transition-duration);
+    stroke: var(--text);
+  }
+  
+  .app .moon-icon {
+    stroke-dasharray: 0px 1px;
+    opacity: 0;
+    transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
+  }
+  
+  .app .sun-icon {
+    stroke-dasharray: 1px 1px;
+    opacity: 1;
+    transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
+  }
+  
+  .app.dark .moon-icon {
+    stroke-dasharray: 1px 1px;
+    opacity: 1;
+  }
+  
+  .app.dark .sun-icon {
+    stroke-dasharray: 0px 1px;
+    opacity: 0;
+  }
+  
+
+
+
+
 /*Explore/Search*/  
 .explore_container{
   max-width: 415px;
@@ -272,7 +328,9 @@ input::placeholder{
   color: white;
 }
  
-/*========== VideoPage ==========*/
+/*============================
+          VideoPage 
+==============================*/
 .window {
   width: 100vw;
   height: 100vh;
@@ -282,18 +340,25 @@ input::placeholder{
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center; 
 }
 
 .beach_container {
-  max-width: 415px;
-  padding: 25px;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 60px 20px;
+  border-radius: 30px;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  max-width: 375px;
 }
 
 #background-video {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: top center; 
   position: fixed;
   left: 0;
   right: 0;
@@ -303,65 +368,37 @@ input::placeholder{
 }
 
 .exit-btn {
-  position: absolute;
-  top: 25px;
-  right: 8px;
-  background-color: var(--accent-color);
+  position: relative;
+  top: -2rem;
+  right: -7rem;
+  background-color: var(--secondary-color);
   border-radius: 50%;
-  padding: 1.33em;
+  padding: 0.5rem 0.75rem;
   border: none;
-  color: white;
+  font-weight: bold;
+  color: #333;
+  z-index: 2;
+  transition: 0.3s ease;
 }
 
 .exit-btn:hover {
-  background-color: var(--secondary-color);
-  color: black;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  font-size: large;
-}
-
-.timer_container {
-  width: min(42.5rem, 100%);
-  margin-inline: auto;
-  padding-inline: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.timer_title{
-  padding: 1em;
+  transform: scale(1.05);
+  background-color: var(--accent-color);
   color: white;
 }
 
-.timer_title2{
-  padding: 1em;
-  color: black;
-}
-
-
-.panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* Timer */
+.timer_container {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  width: 20rem;
-  margin-block: 5rem;
-  padding: 1rem;
-  border-radius: 10rem;
-  -webkit-box-shadow: 0px 0px 15px 10px var(--accent-color); 
-  box-shadow: 0px 0px 15px 10px white;
 }
 
-.panel p {
-  opacity: .8;
-  transition: 1s ease-in;
-}
-
-.panel p.active {
-  opacity: 1;
-  color: var(--accent-color); /*change this color*/
+.timer_title{
+  font-size: 1.33rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  color: #ffffff;
 }
 
 .timer {
@@ -383,16 +420,7 @@ input::placeholder{
   height: 10rem;
   border-radius: 50%;
   position: relative;
-}
-
-.circle::before {
-  content: '';
-  position: absolute;
-  width: 95%;
-  height: 95%;
-  border-radius: 50%;
-  background-color: white;
-  opacity: 0.5;
+  background-color: #e0d3d379;
   border-style: solid;
   border-color: var(--accent-color);
 }
@@ -401,50 +429,97 @@ input::placeholder{
   position: relative;
   display: flex;
   flex-direction: row;
+  gap: 5px;
   color:var(--text-color);
 }
 
 .time p {
   font-size: 2rem;
+  font-family: var(--main-text);
+  font-weight: 600;
 }
 
-.time p:nth-of-type(2) {
-  position: relative;
-  top: -.5rem;
-  margin-inline: 1rem;
-}
-
+/* Control Button */
 .controls {
-  margin-top: 3rem;
+  margin: 1.33rem;
 }
 
 .controls button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-.controls #reset {
-  display: none;
-}
-
-#start{
+#start, #reset{
   color:white;
-}
-
-#start:hover{
-  color: #caf0f8;
-}
-
-#start .fa-play {
   font-size: 40px; 
 }
 
-#reset .fa-arrow-rotate-left {
-  font-size: 40px;
+#start:hover,
+#reset:hover {
   color: #caf0f8;
+  transform: scale(1.05);
 }
 
-#reset:hover .fa-arrow-rotate-left {
-  color: green; 
+/* Timer Buttons */
+.time-select {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.time-select button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.time-select button:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/*============================
+          Dark mode
+==============================*/
+
+body.dark-theme .circle {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--text-color);
+}
+
+
+/*============================
+          Media Queries 
+==============================*/
+
+
+@media (max-width: 375px) {
+  .timer, .circle {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .time p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .time-select {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .time-select button {
+    width: 100%;
+  }
 }
