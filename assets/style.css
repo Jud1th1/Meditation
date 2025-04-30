@@ -27,6 +27,18 @@ p {
   color: #06051D;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
   --main-color: #06051D;
@@ -95,7 +107,11 @@ hr{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-/*========== HomePage ==========*/
+/*====================================
+                HomePage
+  =====================================*/
+
+/*Explore/Search*/  
 .explore_container{
   max-width: 415px;
   height: auto;
@@ -122,6 +138,7 @@ hr{
   padding: 0 1em;
   width: 100%;
   max-width: 500px;
+  margin-bottom: 20px;
 }
 
 input[type=text] {
@@ -161,41 +178,88 @@ input::placeholder{
   background-color: none;
 }
 
-/*Video Section*/
-/* .recommend{
-  margin-top: 1.33em;
-} */
+/*Recommended Video Section*/
+.swiper{
+  height: 300px;
+} 
 
-/* .swiper{
-  margin-top: 1.33em;
-  height: 200px;
-  overflow-x: auto;
-  white-space: nowrap;
-} */
-
-/* .swiper-wrapper {
+.swiper-wrapper {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-} */
-
-/* .swiper-slide{
-  align-items: center;
-  width: 140px;
-  margin-right: 10px;
-} */
+} 
 
 .video__img{
   width: 100%;
-  height: 100%;
+  height: 200px;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.beach__img{
-  height: 200px;
+.video__data {
+  color: #000;
+  margin-top: 1rem;
+  line-height: 1.33rem;
 }
+
+.swiper > .swiper-button-next{
+  color: white;
+  position: absolute;
+  top: 110px;
+}
+
+.swiper > .swiper-button-prev{
+  color: white;
+  position: absolute;
+  top: 110px;
+}
+
+/* Need to fix hover */
+.swiper > .swiper-button-next:hover{
+-webkit-box-shadow:0px 0px 51px 2px rgba(235,245,242,0.9);
+-moz-box-shadow: 0px 0px 51px 2px rgba(235,245,242,0.9);
+box-shadow: 0px 0px 51px 2px rgba(235,245,242,0.9);
+}
+
+.play__btn {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background-image: url("./svg/button.svg");
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.play__btn:hover, 
+.play__btn:focus {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.1);
+} 
+
+/* .playbtn2{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10%;
+  left: 110%;
+  border-radius: 50%;
+  background-image: url("./svg/button.svg");
+  background-size: contain;
+  z-index: 1;
+} */
+
+/* 
+.playbtn2:hover {
+  opacity: 1;
+  cursor: pointer;
+} */
+
 
 /* .video__data {
   position: absolute;
@@ -207,6 +271,15 @@ input::placeholder{
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 } */
+
+/*Video Btn*/
+/* video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+ */
+
 
 /*Affirmation Section*/
 .affirmation_container{
@@ -226,58 +299,11 @@ input::placeholder{
 .playlist{
   font-weight: 800;
 }
-
+/* 
 h3{
   color: white;
 }
-
-
-/*Video Btn*/
-.video__wrapper {
-  position: relative;
-  display: inline-block;
-}
-.play__btn {
-  position: absolute;
-  top: 2%;
-  right: 2%;
-  background-image: url("./svg/button.svg");
-  background-size: contain;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  opacity: 0.8;
-  z-index: 2;
-}
-.play__btn:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.playbtn2{
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 10%;
-  left: 110%;
-  border-radius: 50%;
-  background-image: url("./svg/button.svg");
-  background-size: contain;
-  z-index: 1;
-}
-
-.playbtn2:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-/*Video Btn*/
-video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
+ */
 /*========== VideoPage ==========*/
 .window {
   width: 100vw;

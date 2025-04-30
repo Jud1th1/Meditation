@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serenity Now</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Braah+One&family=Raleway:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script src="https://kit.fontawesome.com/8bc929afbc.js" crossorigin="anonymous"></script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
+</head>
+
+<body>
+  <main>
+    <div class="explore_container">
+      <img src="assets/img/sunset.jpg" alt="Sunset over the hills" class="main_image" />
+
+      <!-- Explore Section -->
+      <section class="explore">
+        <h2>Explore Page</h2>
+        <p>Search our library for the sounds that soothe you</p>
+
+        <form action="#" role="search" aria-label="Search audio library">
+          <label for="search" class="sr-only">Search</label>
+          <div class="search-container">
+            <input type="text" id="search" name="search" placeholder="Search..." />
+            <button type="submit" class="search" aria-label="Submit search">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Recommended Section -->
+      <section class="swiper-container">
+        <h2>Recommended for you</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="video__wrapper">
+                <img src="assets/img/beach.jpg" alt="Beach at sunset" class="video__img" />
+                <a href="beach.html" class="play__btn" aria-label="Play Beach Serenade"></a>
+              </div>
+              <div class="video__data">
+                <h3 class="video__title">Beach Serenade</h3>
+                <span class="video__description">Meditation</span>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="video__wrapper">
+                <img src="assets/img/leaves.jpg" alt="Plants with rain droplets" class="video__img" />
+                <a href="rain.html" class="play__btn" aria-label="Play Stormy Serenade"></a>
+              </div>
+              <div class="video__data">
+                <h3 class="video__title">Stormy Serenade</h3>
+                <span class="video__description">Meditation</span>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="video__wrapper">
+                <img src="assets/img/coffee.jpg" alt="Coffee cup with latte art" class="video__img" />
+                <a href="jazz.html" class="play__btn" aria-label="Play Jazz Serenade"></a>
+              </div>
+              <div class="video__data">
+                <h3 class="video__title">Jazz Serenade</h3>
+                <span class="video__description">Meditation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Swiper controls -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <!-- Affirmation Section -->
+      <section class="affirmation_container">
+        <h2>Daily Affirmation</h2>
+        <div class="affirmation">
+          <div class="video__wrapper">
+            <h2 class="playlist">I AM Playlist</h2>
+            <h3>Morning Playlist | 20 min</h3>
+            <a href="#" class="playbtn2" aria-label="Play I AM Playlist"></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="swiper.js"></script>
+
+  <!-- jQuery (if used) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
