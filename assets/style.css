@@ -19,10 +19,11 @@ h2 {
   font-size: 2em;
   color: #06051D;
   text-shadow: 1px 1px #D9D9D9;
+  margin-bottom: 20px;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1rem;
   color: #06051D;
 }
 
@@ -132,6 +133,10 @@ input[type=text] {
   background-color: var(--secondary-color);
 }
 
+input::placeholder{
+  color: #474747;
+}
+
 .search-container button {
   position: absolute;
   right: 0;
@@ -157,29 +162,29 @@ input[type=text] {
 }
 
 /*Video Section*/
-.recommend{
+/* .recommend{
   margin-top: 1.33em;
-}
+} */
 
-.swiper{
+/* .swiper{
   margin-top: 1.33em;
   height: 200px;
   overflow-x: auto;
   white-space: nowrap;
-}
+} */
 
-.swiper-wrapper {
+/* .swiper-wrapper {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.swiper-slide{
+/* .swiper-slide{
   align-items: center;
   width: 140px;
   margin-right: 10px;
-}
+} */
 
 .video__img{
   width: 100%;
@@ -192,7 +197,7 @@ input[type=text] {
   height: 200px;
 }
 
-.video__data {
+/* .video__data {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -201,7 +206,7 @@ input[type=text] {
   box-sizing: border-box;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 
 /*Affirmation Section*/
 .affirmation_container{
@@ -234,8 +239,8 @@ h3{
 }
 .play__btn {
   position: absolute;
-  top: 0%;
-  right: 0%;
+  top: 2%;
+  right: 2%;
   background-image: url("./svg/button.svg");
   background-size: contain;
   width: 40px;
