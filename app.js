@@ -79,3 +79,17 @@ timeButtons.forEach(button => {
     reset(); // Also stop/reset any running session
   });
 });
+
+
+
+/*===================================
+            FLEXSLIDER JS
+=====================================*/
+$(window).on('load', function() {
+    $('.flexslider').flexslider({
+      animation: "slide",
+      slideshowSpeed: 2000,
+      reverse: false,
+      pauseOnHover: true
+    });
+  });
