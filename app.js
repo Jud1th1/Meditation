@@ -1,4 +1,31 @@
-//Meditation Timer Script
+/*===================================
+            TOGGLE JS
+=====================================*/
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleCheckbox = document.getElementById("toggle-theme");
+  
+    toggleCheckbox.addEventListener("change", function () {
+      document.body.classList.toggle("dark-theme", this.checked);
+    });
+  });
+  
+
+/*===================================
+            FLEXSLIDER JS
+=====================================*/
+$(window).on('load', function() {
+    $('.flexslider').flexslider({
+      animation: "slide",
+      slideshowSpeed: 2000,
+      reverse: false,
+      pauseOnHover: true
+    });
+  });
+
+
+/*===================================
+           Meditation Timer JS
+=====================================*/
 
 let sound = document.getElementById('sound');
 let minutesDisplay = document.getElementById('minutes');
@@ -81,15 +108,3 @@ timeButtons.forEach(button => {
 });
 
 
-
-/*===================================
-            FLEXSLIDER JS
-=====================================*/
-$(window).on('load', function() {
-    $('.flexslider').flexslider({
-      animation: "slide",
-      slideshowSpeed: 2000,
-      reverse: false,
-      pauseOnHover: true
-    });
-  });

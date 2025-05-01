@@ -15,16 +15,37 @@
   --title-text:'IM Fell Great Primer', serif;
 }
 
-h2 {
+h1{
   font-size: 2em;
+  color: #06051D;
+  text-shadow: 1px 1px #D9D9D9;
+  margin-bottom: 10px;
+}
+
+h2{
+  font-size: 1.33em;
   color: #06051D;
   text-shadow: 1px 1px #D9D9D9;
   margin-bottom: 20px;
 }
 
+h3{
+  font-size: 1em;
+  color: #06051D;
+  text-shadow: 1px 1px #D9D9D9;
+}
+
 p {
   font-size: 1rem;
   color: #06051D;
+}
+
+.logo{
+  font-size: 2em;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  color: #073b4c;
+  opacity: 0.5;
 }
 
 .sr-only {
@@ -47,6 +68,31 @@ body.dark-theme {
   --text-color: #B2B0D6;
   --main-text:'Raleway', sans-serif;
   --title-text:'Braah One', sans-serif;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p,
+body.dark-theme span {
+  color: var(--text-color);
+  text-shadow: none;
+}
+
+body.dark-theme .main_image{
+  background-image: none;
+}
+
+body.dark-theme .flex-control-paging li a{
+	background: white;
+}
+
+body.dark-theme .flex-control-paging li a.flex-active {
+	background: var(--accent-color);
+}
+
+body.dark-theme input::placeholder{
+  color: #eeeded;
 }
 
 /*========== Cover Page ==========*/
@@ -110,63 +156,71 @@ hr{
 /*====================================
                 HomePage
   =====================================*/
-
-  .toggle_btn {
-    border: none;
-    background-color: inherit;
-    cursor: pointer;
-    border-radius: 9px;
-    padding: 8px;
-  }
-  
-  .app {
-    --transition-duration: 400ms;
-    --text: #ffffff;
-  }
-  
-  .app.dark {
-    --bg: #333;
-    --text: white;
-  }
-  
-  .app {
+  .theme-toggle {
     position: absolute;
-    top: 5%;
-    right: 25%;
-    /* transition: color, background-color var(--transition-duration); */
+    top: 20px;
+    right: 20px;
+    z-index: 10;
   }
   
-  .app svg {
-    transition: stroke var(--transition-duration);
-    stroke: var(--text);
+  .toggle-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: background 0.3s ease;
   }
   
-  .app .moon-icon {
-    stroke-dasharray: 0px 1px;
+  .toggle-label i {
+    font-size: 14px;
+    color: var(--text-color);
+    transition: opacity 0.3s ease;
+  }
+  
+  .toggle-label i:first-of-type {
+    margin-left: auto;
+  }
+  
+  .toggle-label i:last-of-type {
+    margin-right: auto;
+  }
+  
+  .toggle-ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+  
+  /* Hide checkbox */
+  #toggle-theme {
+    display: none;
+  }
+  
+  /* Move the ball when checked */
+  #toggle-theme:checked + .toggle-label .toggle-ball {
+    transform: translateX(40px);
+  }
+  
+  /* Switch icons on toggle */
+  #toggle-theme:checked + .toggle-label i:first-of-type {
     opacity: 0;
-    transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
   }
   
-  .app .sun-icon {
-    stroke-dasharray: 1px 1px;
-    opacity: 1;
-    transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
-  }
-  
-  .app.dark .moon-icon {
-    stroke-dasharray: 1px 1px;
+  #toggle-theme:checked + .toggle-label i:last-of-type {
     opacity: 1;
   }
   
-  .app.dark .sun-icon {
-    stroke-dasharray: 0px 1px;
-    opacity: 0;
-  }
-  
-
-
-
-
 /*Explore/Search*/  
 .explore_container{
   max-width: 415px;
@@ -174,6 +228,7 @@ hr{
   margin: auto;
   background-color: var(--main-color);
   padding: 25px;
+  position: relative;
 }
 
 .main_image{
@@ -271,6 +326,28 @@ input::placeholder{
   height: 300px !important;
   overflow: hidden;
 } 
+
+.play__btn {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+/*   background-image: url("/assets/button.svg"); */
+  background-color: red;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.play__btn:hover, 
+.play__btn:focus {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.1);
+} 
+
 
 /*Affirmation Section*/
 .affirmation_container{

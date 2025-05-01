@@ -4,12 +4,12 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Serenity Now</title>
+        <title>Serenity Now| Home</title>
       
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Braah+One&family=Raleway:wght@400;600;800&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=IM+Fell+Great+Primer:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
       
         <!-- Flexslider CSS -->
 	    <link href="flexslider.css" rel="stylesheet">
@@ -34,30 +34,21 @@
 <body>
     <main>
         <div class="explore_container">
+          <p class="logo">Serenity Now</p>  
           <img src="assets/img/sunset.jpg" alt="Sunset over the hills" class="main_image" />
           <!-- Toggle Btn -->
-          <div x-data="{isDark: true}" :class="isDark? 'dark': ''" class="app">
-            <button class="toggle_btn" title="Toggle Theme" @click="isDark = !isDark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Moon -->
-                <path pathLength="1" class="moon-icon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                <!-- Sun -->
-                <circle pathLength="1" class="sun-icon" cx="12" cy="12" r="5"></circle>
-                <line pathLength="1" class="sun-icon" x1="12" y1="1" x2="12" y2="3"></line>
-                <line pathLength="1" class="sun-icon" x1="12" y1="21" x2="12" y2="23"></line>
-                <line pathLength="1" class="sun-icon" x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line pathLength="1" class="sun-icon" x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line pathLength="1" class="sun-icon" x1="1" y1="12" x2="3" y2="12"></line>
-                <line pathLength="1" class="sun-icon" x1="21" y1="12" x2="23" y2="12"></line>
-                <line pathLength="1" class="sun-icon" x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line pathLength="1" class="sun-icon" x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
-            </button>
+          <div class="theme-toggle">
+            <input type="checkbox" id="toggle-theme" />
+            <label for="toggle-theme" class="toggle-label" aria-label="Toggle dark or light mode">
+              <span class="toggle-ball"></span>
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+            </label>
           </div>
-    
+          
           <!-- Explore Section -->
           <section class="explore">
-            <h2>Explore Page</h2>
+            <h1>Explore Page</h1>
             <p>Search our library for the sounds that soothe you</p>
     
             <form action="#" role="search" aria-label="Search audio library">
@@ -72,19 +63,20 @@
           </section>
     
           <!-- Recommended Section -->
-          <section class="swiper-container">
+          <h2>Recommended for you:</h2>
+          <section class="swiper-container" aria-label="Recommended Meditation Tracks">
             <div class="flexslider">
                 <ul class="slides">
                      <li>
-                         <div class="slide1">
+                         <div class="slide1" tabindex="0">
                             <img src="assets/img/beach.jpg" alt="Beach at sunset" class="video__img" />
                             <a href="beach.html" class="play__btn" aria-label="Play Beach Serenade"></a>
-                            <h3>Beach Serenade</h2>
+                            <h3 class="video__title">Beach Serenade</h3>
                             <span class="video__description">Meditation</span>
                          </div>
                      </li>
                      <li>
-                         <div class="slide2">
+                         <div class="slide2" tabindex="0">
                             <img src="assets/img/leaves.jpg" alt="Plants with rain droplets" class="video__img" />
                             <a href="rain.html" class="play__btn" aria-label="Play Stormy Serenade"></a>
                             <h3 class="video__title">Stormy Serenade</h3>
@@ -92,7 +84,7 @@
                          </div>
                      </li>
                      <li>
-                         <div class="slide3">
+                         <div class="slide3" tabindex="0">
                             <img src="assets/img/coffee.jpg" alt="Coffee cup with latte art" class="video__img" />
                             <a href="jazz.html" class="play__btn" aria-label="Play Jazz Serenade"></a>
                             <h3 class="video__title">Jazz Serenade</h3>
@@ -100,7 +92,7 @@
                          </div>
                      </li>
                      <li>
-                         <div class="slide4">
+                         <div class="slide4" tabindex="0">
                             <img src="assets/img/forest.jpg" alt="Peaceful forest with sunlight" class="video__img" />
                             <a href="#" class="play__btn" aria-label="Play Forest Serenade"></a>
                             <h3 class="video__title">Forest Serenade</h3>
@@ -117,7 +109,7 @@
             <div class="affirmation">
               <div class="video__wrapper">
                 <h2 class="playlist">I AM Playlist</h2>
-                <h3 class="playlist_para">Morning Playlist | 20 min</h3>
+                <h4 class="playlist_para">Morning Playlist | 20 min</h4>
                 <a href="#" class="playbtn2" aria-label="Play I AM Playlist"></a>
               </div>
             </div>
