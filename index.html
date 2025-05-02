@@ -25,27 +25,34 @@
         <link rel="manifest" href="/assets/site.webmanifest" />
 
         <!--Load jQuery...-->
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
-	    <!--Load jQuery Flexslider...-->
+	      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+	      <!--Load jQuery Flexslider...-->
         <script src="jquery.flexslider-min.js" defer></script>
         <!--My Script file-->
         <script src="app.js" defer></script>
+
+        <!-- Font Awesome Kit -->
+        <script src="https://kit.fontawesome.com/adc4fa3b86.js" crossorigin="anonymous"></script>
       </head>
 <body>
     <main>
         <div class="explore_container">
-          <p class="logo">Serenity Now</p>  
-          <img src="assets/img/sunset.jpg" alt="Sunset over the hills" class="main_image" />
-          <!-- Toggle Btn -->
-          <div class="theme-toggle">
-            <input type="checkbox" id="toggle-theme" />
-            <label for="toggle-theme" class="toggle-label" aria-label="Toggle dark or light mode">
-              <span class="toggle-ball"></span>
-              <i class="fas fa-sun"></i>
-              <i class="fas fa-moon"></i>
-            </label>
-          </div>
           
+          <!-- Hero Section with background image -->
+          <div class="main_image">
+            <p class="logo">Serenity Now</p>
+
+          <!-- Toggle Button -->
+            <div class="theme-toggle">
+              <input type="checkbox" id="toggle-theme" />
+              <label for="toggle-theme" class="toggle-label" aria-label="Toggle dark or light mode">
+                <span class="toggle-ball"></span>
+                <i class="fa-solid fa-sun" style="color: #ffffff;"></i>
+                <i class="fa-solid fa-moon"></i>
+              </label>
+            </div>
+          </div>
+
           <!-- Explore Section -->
           <section class="explore">
             <h1>Explore Page</h1>
