@@ -70,54 +70,6 @@ body.dark-theme {
   --secondary-color: #25234E;
   --accent-color: #FCDFCE;
   --text-color: #B2B0D6;
-  --main-text:'Raleway', sans-serif;
-  --title-text:'Braah One', sans-serif;
-}
-
-/* Dark Mode Fonts */
-body.dark-theme h1,
-body.dark-theme h2,
-body.dark-theme h3,
-body.dark-theme span {
-  color: var(--text-color);
-  text-shadow: none;
-}
-
-body.dark-theme p,
-body.dark-theme .video__title,
-body.dark-theme .video__description{
-  color:  #b0b0c0;
-}
-
-/* Hero Section */
-body.dark-theme .explore_container::before {
-  background-image: url('/assets/img/sunrise.jpg'); 
-}
-
-body.dark-theme input::placeholder{
-  color: #eeeded;
-}
-
-body.dark-theme .logo{
-  color: white;
-}
-
-/* Dark Mode FlexSlider */
-body.dark-theme .flex-control-paging li a{
-	background: white;
-}
-
-body.dark-theme .flex-control-paging li a.flex-active {
-	background: var(--accent-color);
-}
-
-body.dark-theme .flex-direction-nav a:before {
-  color: white !important;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
-}
-/* Dark Mode Affirmation */
-body.dark-theme .playlist{
-  color:#000;
 }
 
 /*====================================
@@ -184,39 +136,52 @@ hr{
           HomePage| TOGGLE
   =====================================*/
 
-/* Toggle */
+/* Toggle Wrapper */
 .theme-toggle {
   position: static;
   z-index: 2;
 }
 
+/* Label */
 .toggle-label {
   position: relative;
-  display: flex;
-  align-items: center;
   width: 55px;
   height: 30px;
   background-color: var(--secondary-color);
   border-radius: 30px;
   cursor: pointer;
-  padding: 0 10px;
-  gap: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(105, 104, 104, 0.25);
 }
 
+/* Icons */
 .toggle-label i {
-  font-size: 14px;
-  color: var(--text-color);
+  position: absolute;
+  font-size: 20px;
   transition: opacity 0.3s ease;
+  pointer-events: none;
+  color: var(--text-color);
 }
 
-.toggle-label i:first-of-type {
-  margin-left: auto;
+/* Show moon, hide sun by default */
+.toggle-label .fa-moon {
+  opacity: 1;
+  right: 5px;
 }
 
-.toggle-label i:last-of-type {
-  margin-right: auto;
+.toggle-label .fa-sun {
+  opacity: 0;
+  left: 5px;
 }
 
+/* Checkbox hidden */
+#toggle-theme {
+  display: none;
+}
+
+/* Ball */
 .toggle-ball {
   position: absolute;
   top: 3px;
@@ -229,20 +194,21 @@ hr{
   z-index: 1;
 }
 
-#toggle-theme {
-  display: none; /* Hide checkbox */
+.toggle-ball:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
+/* Theme toggled (checked) */
 #toggle-theme:checked + .toggle-label .toggle-ball {
-  transform: translateX(25px); /* Move the ball when checked */
+  transform: translateX(25px);
 }
 
-#toggle-theme:checked + .toggle-label i:first-of-type {
-  opacity: 0; /* Switch icons on toggle */
-}
-
-#toggle-theme:checked + .toggle-label i:last-of-type {
+#toggle-theme:checked + .toggle-label .fa-sun {
   opacity: 1;
+}
+
+#toggle-theme:checked + .toggle-label .fa-moon {
+  opacity: 0;
 }
   
 /*------------------------------------
@@ -295,8 +261,8 @@ hr{
 
 input[type=text] {
   width: 100%;
-  padding: 8px;
-  font-size: 16px;
+  padding: 10px 12px;
+  font-size: 1rem;
   border: none;
   border-radius: 10px;
   background-color: var(--secondary-color);
@@ -328,6 +294,14 @@ input::placeholder{
   color: white;
   font-size: 16px;
   background-color: none;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.swiper-container {
+  margin-bottom: 2.5rem;
 }
 
 /* Video Flexslider */
@@ -380,6 +354,17 @@ input::placeholder{
 
 .flex-control-paging{
 	margin-bottom: 1rem;
+}
+
+.flex-control-paging li a {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  transition: transform 0.2s ease;
+}
+
+.flex-control-paging li a:hover {
+  transform: scale(1.3);
 }
 
 .flex-control-paging li a.flex-active {
@@ -638,6 +623,66 @@ input::placeholder{
 /*============================
           Dark mode
 ==============================*/
+/* Dark Mode Fonts */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme span {
+  color: var(--text-color);
+  text-shadow: none;
+}
+
+body.dark-theme p,
+body.dark-theme .video__title,
+body.dark-theme .video__description{
+  color:  #b0b0c0;
+}
+
+body.dark-theme .video__description{
+  color: #ccc;
+}
+
+/* Logo */
+body.dark-theme .logo {
+  text-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.5),
+    0px 0px 8px rgba(255, 255, 255, 0.3);
+}
+
+body.dark-theme .toggle-label{
+  box-shadow: 0px 4px 4px rgba(176, 160, 184, 0.25);
+}
+
+/* Hero Section */
+body.dark-theme .main_image {
+  background-image: url('/assets/img/purplemountains.jpg');
+}
+
+body.dark-theme input::placeholder{
+  color: #eeeded;
+}
+
+body.dark-theme .logo{
+  color: white;
+}
+
+/* Dark Mode FlexSlider */
+body.dark-theme .flex-control-paging li a{
+	background: white;
+}
+
+body.dark-theme .flex-control-paging li a.flex-active {
+	background: var(--accent-color);
+}
+
+body.dark-theme .flex-direction-nav a:before {
+  color: white !important;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+/* Dark Mode Affirmation */
+body.dark-theme .playlist{
+  color:#000;
+}
 
 body.dark-theme .circle {
   background-color: rgba(255, 255, 255, 0.1);

@@ -9,6 +9,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+/* SAVE THEME PREFRENCE */
+const toggle = document.getElementById("toggle-theme");
+const body = document.body;
+
+// On toggle
+toggle.addEventListener("change", function () {
+  if (this.checked) {
+    body.classList.add("dark-theme");
+    localStorage.setItem("theme", "dark");
+  } else {
+    body.classList.remove("dark-theme");
+    localStorage.setItem("theme", "light");
+  }
+});
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+
+    const toggle = document.getElementById("toggle-theme");
+    if (toggle) toggle.checked = true; // sync the toggle on homepage
+  }
+});
+
 
 /*===================================
             FLEXSLIDER JS
