@@ -613,11 +613,13 @@ section {
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .time-select button:hover {
   background-color: var(--accent-color);
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 /*============================
@@ -684,10 +686,43 @@ body.dark-theme .playlist{
   color:#000;
 }
 
-body.dark-theme .circle {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: var(--text-color);
+/* Dark Mode Video Page */
+
+body.dark-theme .video_container {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
 }
+
+body.dark-theme .exit-btn {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+body.dark-theme .exit-btn:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+body.dark-theme .timer_title,
+body.dark-theme .time p {
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-theme .circle {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .time-select button {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+body.dark-theme .time-select button:hover {
+  background-color: var(--secondary-color);
+}
+
 
 
 /*============================
