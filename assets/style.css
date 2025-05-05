@@ -520,7 +520,10 @@ section {
   color: white;
 }
 
-/* Timer */
+/*============================
+       Timer & Controls 
+==============================*/
+
 .timer_container {
   display: flex;
   justify-content: center;
@@ -751,3 +754,17 @@ body.dark-theme .time-select button:hover {
     width: 100%;
   }
 }
+
+@media (min-width: 1024px) {
+  body {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    width: 425px;
+    margin: 2rem 0;
+  }
+}
+
