@@ -755,16 +755,94 @@ body.dark-theme .time-select button:hover {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   body {
-    background-color: var(--main-color);
-    display: flex;
-    justify-content: center;
+    background-color: var(--accent-color);
+  }
+  
+  h1, h2{
+    text-align: center;
+    text-decoration: underline solid var(--secondary-color);
+    text-underline-offset: 20px;
+    margin-bottom: 2rem;
+  }
+  
+  /* Hero/Explore */
+  .explore_container {
+    max-width: 1200px;
+    padding: 2rem 4rem;
+    margin: auto;
+  }
+  
+  .main_image {
+    border-radius: 0px;
+    height: 30vh;
+    margin: 0px;
+  }
+  
+  .logo {
+    font-size: 4em;
+    opacity: 1;
+    margin: auto;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
+  }
+  
+  .explore{
+    padding: 3rem 0;
+    justify-items: center;
+  }
+  
+  form{
+    width: 100%;
+    justify-items: center;
+  }
+  
+  /* Flexslider/Recommend */
+  .swiper-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .flexslider .slides img {
+    height: 300px;
+    border-radius: 0;
+  }
+  
+  .flex-viewport{
+    height: 300px;
+  }
+  
+  .flex-direction-nav a {
+    top: 60%;
+    opacity: 1;
+  }
+  
+  .flex-control-paging{
+    margin-bottom: 1rem;
+  }
+  
+  
+  .play__btn{
+    height: 100px;
+    width: 100px;
+  }
+  
+  /* Affirmation */
+  
+  .affirmation_container{
+    padding-top: 4rem;
   }
 
-  main {
-    width: 425px;
-    margin: 2rem 0;
+  .affirmation {
+    padding: 3rem 2rem;
+  }
+  
+  .playlist{
+    text-decoration: none;
+  }
+
+  .playbtn2{
+    right: 20rem;
+    bottom: 3rem;
   }
 }
-
