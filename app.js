@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  document.body.classList.add("fade-in");
+
 /*===================================
             TOGGLE JS
 =====================================*/
@@ -41,9 +43,9 @@ const sound = document.getElementById('sound');
     const path = window.location.pathname;
 
     if (path.includes("jazz")) {
-      sound.volume = 0.3; // Adjusted for Jazz page
+      sound.volume = 0.1; // Adjusted for Jazz page
     } else if (path.includes("forest")) {
-      sound.volume = 0.35; // Adjusted for Forest page
+      sound.volume = 0.2; // Adjusted for Forest page
     } else {
       sound.volume = 0.5; // Default volume for other pages
     }

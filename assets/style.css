@@ -695,9 +695,14 @@ body.dark-theme .playlist{
   color:#000;
 }
 
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
 
-
-
+body.fade-in {
+  opacity: 1;
+}
 
 /*============================
           Media Queries 
