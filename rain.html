@@ -43,13 +43,15 @@
 
         <!-- Controls -->
         <div class="controls">
-            <button id="start"><i class="fa-solid fa-play"></i></button>
+            <button id="start" aria-label="Play or pause timer">
+                <i class="fa-solid fa-play"></i>
+            </button>
     
             <a id="reset" href="javascript:void(0)" style="display:none;"><i class="fa-solid fa-arrow-rotate-left"></i></a>
             <button id="pause" style="display:none;"></button>
 
              <!-- Audio Element -->
-            <audio id="sound" autoplay="false">
+            <audio id="sound" preload="auto">
                 <source src="./assets/sounds/rain.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>

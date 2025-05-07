@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if ($('.flexslider').length) {
     $('.flexslider').flexslider({
       animation: "slide",
-      slideshowSpeed: 2000,
+      slideshowSpeed: 3000,
       reverse: false,
       pauseOnHover: true
     });
@@ -37,14 +37,28 @@ document.addEventListener("DOMContentLoaded", function () {
 =====================================*/
 
 const sound = document.getElementById('sound');
+const path = window.location.pathname;
+
+if (path.includes("jazz")) {
+  sound.volume = 0.3;
+} else if (path.includes("stormy")) {
+  sound.volume = 0.35;
+} else {
+  sound.volume = 0.5;
+}
+
+
 const minutesDisplay = document.getElementById('minutes');
 const secondsDisplay = document.getElementById('seconds');
 const startBtn = document.getElementById('start');
 const resetBtn = document.getElementById('reset');
 const pauseBtn = document.getElementById('pause');
 const timeButtons = document.querySelectorAll('.time-select button');
+const audio = document.querySelector("audio");
 
-if (sound && minutesDisplay && secondsDisplay && startBtn) {
+audio.loop = true;
+
+  if (sound && minutesDisplay && secondsDisplay && startBtn) {
   let timerInterval;
   let isTimerRunning = false;
   let fakeDuration = 600;
@@ -59,7 +73,7 @@ if (sound && minutesDisplay && secondsDisplay && startBtn) {
     secondsDisplay.textContent = seconds.toString().padStart(2, '0');
   }
 
-  function start() {
+  /* function start() {
     if (isTimerRunning) return;
 
     startBtn.style.display = "none";
@@ -91,9 +105,43 @@ if (sound && minutesDisplay && secondsDisplay && startBtn) {
     clearInterval(timerInterval);
     isTimerRunning = false;
     sound.pause();
-  }
+  }   */ 
 
-  function reset() {
+    const startIcon = startBtn.querySelector('i'); // get the icon inside the button
+    let currentTime = fakeDuration;
+    
+    function togglePlay() {
+      if (!isTimerRunning) {
+        // START
+        sound.play();
+        timerInterval = setInterval(() => {
+          currentTime--;
+          updateDisplay(currentTime);
+    
+          if (currentTime <= 0) {
+            clearInterval(timerInterval);
+            sound.pause();
+            sound.currentTime = 0;
+            isTimerRunning = false;
+            startIcon.className = "fa-solid fa-play";
+          }
+        }, 1000);
+    
+        startIcon.className = "fa-solid fa-pause";
+        isTimerRunning = true;
+      } else {
+        // PAUSE
+        clearInterval(timerInterval);
+        sound.pause();
+        startIcon.className = "fa-solid fa-play";
+        isTimerRunning = false;
+      }
+    }
+    
+    startBtn.addEventListener('click', togglePlay);    
+
+
+ /*  function reset() {
     clearInterval(timerInterval);
     isTimerRunning = false;
     sound.pause();
@@ -102,7 +150,18 @@ if (sound && minutesDisplay && secondsDisplay && startBtn) {
     startBtn.style.display = "inline-block";
     resetBtn.style.display = "none";
     pauseBtn.style.display = "none";
-  }
+  } */
+
+    function reset() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      sound.pause();
+      sound.currentTime = 0;
+      currentTime = fakeDuration;
+      updateDisplay(fakeDuration);
+      startIcon.className = "fa-solid fa-play";
+    }
+    
 
   startBtn.addEventListener('click', start);
   resetBtn.addEventListener('click', reset);
