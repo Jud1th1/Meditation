@@ -246,7 +246,21 @@ hr {
       }      
 }
 
-
+@keyframes fadeSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .title {
+    animation: fadeSlide 1.2s ease-out both;
+  }
+  
 /*====================================
              Media Query 
 =====================================*/
@@ -292,7 +306,7 @@ hr {
         height: 120px;
         position: relative;
         left: 19%;
-        top: 20%;
+        top: 21%;
     }
     
     .vapour span {

@@ -10,62 +10,66 @@
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+  - [Bonus Features](#Bonus-Features)
 
-## Overview
+## 🧘🏾‍♀️ Overview
 
 Serenity Now is a calming, mobile-first meditation app that provides a curated selection of 10-minute sessions. Each session pairs immersive background videos with soft ambient soundtracks, helping users unwind through a clean and focused interface. The app is optimized for accessibility and responsive performance across all devices.
 
-### The challenge
+### 🔧 The challenge
 
 Building an app that combines HTML5 video, audio, and JavaScript timers in a seamless way — all while maintaining performance, responsiveness, and accessibility. Ensuring media loaded efficiently and that users could easily control their experience (start, pause, reset, switch durations) across multiple themed pages was key.
 
-### Screenshot
+### 📸 Screenshot
 
 ![](./assets/img/serenity.png)
 
-### Links
+### 🔗 Links
 
 - Solution URL: https://github.com/Jud1th1/Meditation [https://github.com/Jud1th1/Meditation]
 - Live Site URL: https://serenitynowmeditate.netlify.app/ [https://serenitynowmeditate.netlify.app/]
 
-## My process
+## 🚀 My process
 
 1. **Conceptualization**: Inspired by JavaScript clock and timer tutorials, I reimagined the concept into a mood-focused meditation app with a tranquil, aesthetic-first approach.
 
 2. **Design and Styling**: I created a clean and visually pleasing design, incorporating a responsive layout to ensure an optimal experience on mobile devices. This project served as an opportunity to use a pure css image I made for the intro screen.
 
-3. **Frontend Development**: Implemented the frontend using HTML, CSS, and JavaScript. Integrated the Swiper library for the playlist carousel and designed custom controls for video and audio playback.
+3. **Frontend Development**: Built all pages in semantic HTML, CSS, and vanilla JavaScript. Replaced default carousels with Flexslider and integrated looping background videos + dynamic audio control.
 
 4. **Audio Integration**: Utilized the HTML5 `<audio>` element to seamlessly integrate background music with play, pause, and reset controls.
 
-5. **Testing**: Conducted extensive testing across various devices and browsers to ensure compatibility and performance. Made adjustments to enhance the user experience.
+5. **Animation & Transitions**: Added CSS page fade-ins and subtle hover/entrance animations to create a calm, floating interface that guides the user without overwhelming them.
 
-### Built with
+6. **Accessibility & UX Polish**: Ensured WCAG compliance through ARIA labels, contrast adjustments, keyboard focus, and intuitive navigation. The app passed automated accessibility audits via accessiBe and Lighthouse.
+
+### 🛠️ Built with
 
 - HTML
-- Flexbox
-- CSS
-- Javascript
-- Swiper bundle
-- Mobile workflow
+- CSS (Flexbox + animations)
+- Javascript (vanilla)
+- jQuery Flexslider
+- Mobile-first responsive design
 
-### What I learned
+### 💡 What I learned
 
-Throughout the development of the Serenity Now App, I learned several things:
+- How to build a fully functioning timer from scratch using setInterval
+- Audio & video syncing logic, including playback control and dynamic volume per page
+- Accessibility-first development and how to pass full WCAG audits
+- Designing around vibe: how layout, sound, motion, and type come together to support calm UX
 
-- **Media Optimization**: Explored techniques for optimizing images and videos to enhance website performance and reduce loading times.
+### 🔮 Continued Development
 
-- **Mobile-First Design**: Focused on mobile-first design principles to create a responsive and user-friendly interface for a diverse range of devices.
+While Serenity Now is fully functional and polished, I’d love to expand it with:
 
-- **Integration of Multimedia**: Gained experience in integrating multimedia elements, such as background videos and ambient sounds, while maintaining performance.
+- 🧑‍💻 User preferences (save favorite sessions or preferred timer lengths)
+- 🖥️ Desktop layout refinements for widescreen users
+- 🎧 Additional meditation themes (e.g., Firelight, Rainforest, Windchimes)
+- 🌙 Toggle between “Morning” and “Evening” vibes with changing color palettes
 
-## Continued Development
+### 🌱 Bonus Features
 
-The Serenity Now App is an ongoing project with plans for future enhancements and features, including:
-
-- **Desktop Optimization**: Extending the app's compatibility and optimizing the user experience for desktop devices.
-
-- **User Accounts**: Implementing user accounts to allow users to save preferences and track their meditation progress.
-
-- **Expanded Playlist**: Adding more meditation sessions and diverse content to cater to a broader audience.
+- Pure CSS animated coffee cup welcome screen
+- Looping audio with soft volume control
+- Page load transitions and timer icon toggles
+- Dark mode toggle with persistent preference using localStorage
