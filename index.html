@@ -1,127 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Serenity Now| Home</title>
-      
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=IM+Fell+Great+Primer:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-      
-        <!-- Flexslider CSS -->
-	    <link href="flexslider.css" rel="stylesheet">
-        
-        <!-- Stylesheet -->
-        <link rel="stylesheet" href="./assets/style.css" />
-        <script src="https://kit.fontawesome.com/8bc929afbc.js" crossorigin="anonymous"></script>
-      
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
-        <link rel="manifest" href="/assets/site.webmanifest" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=IM+Fell+Great+Primer:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <!--Load jQuery...-->
-	      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
-	      <!--Load jQuery Flexslider...-->
-        <script src="jquery.flexslider-min.js" defer></script>
-        <!--My Script file-->
-        <script src="app.js" defer></script>
-
-        <!-- Font Awesome Kit -->
-        <script src="https://kit.fontawesome.com/adc4fa3b86.js" crossorigin="anonymous"></script>
-      </head>
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=IM+Fell+Great+Primer:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ 
+  <title>Serenity Now | Welcome</title>
+  <link rel="stylesheet" href="/assets/coffee.css" />
+</head>
 <body>
-    <main>
-        <div class="explore_container">
-          
-          <!-- Hero Section with background image -->
-          <div class="main_image">
-            <p class="logo">Serenity Now</p>
-
-          <!-- Toggle Button -->
-            <div class="theme-toggle">
-              <input type="checkbox" id="toggle-theme" />
-              <label for="toggle-theme" class="toggle-label" aria-label="Toggle dark or light mode">
-                <span class="toggle-ball"></span>
-                <i class="fa-solid fa-sun" style="color: #ffffff;" aria-hidden="true"></i>
-                <i class="fa-solid fa-moon" aria-hidden="true"></i>
-              </label>
-            </div>
+   
+    <div class="container">
+      <div class="coffee-container">
+        <h1 class="title">Serenity Now</h1>
+        <hr>
+        <h2 class="subtitle">Meditation App</h2>
+          <div class="plate"></div>
+          <div class="cup">
+              <div class="top">
+                  <div class="vapour">
+                      <span style="--i:1;"></span>
+                      <span style="--i:3;"></span>
+                      <span style="--i:16;"></span>
+                      <span style="--i:5;"></span>
+                      <span style="--i:13;"></span>
+                      <span style="--i:20;"></span>
+                      <span style="--i:6;"></span>
+                      <span style="--i:7;"></span>
+                      <span style="--i:10;"></span>
+                      <span style="--i:8;"></span>
+                      <span style="--i:17;"></span>
+                      <span style="--i:11;"></span>
+                      <span style="--i:12;"></span>
+                      <span style="--i:14;"></span>
+                      <span style="--i:2;"></span>
+                      <span style="--i:9;"></span>
+                      <span style="--i:15;"></span>
+                      <span style="--i:4;"></span>
+                      <span style="--i:19;"></span>
+                  </div>
+                  <div class="circle">
+                      <div class="tea"></div>
+                  </div>
+              </div>
+              <div class="handle"></div>
           </div>
+          <a class="enter" href="/homepage" aria-label="Go to homepage">Let's Relax</a>
+      </div>
+      
+    </div>
 
-          <!-- Explore Section -->
-          <section class="explore">
-            <h1>Explore Page</h1>
-            <p>Search our library for the sounds that soothe you</p>
-    
-            <form action="#" role="search" aria-label="Search audio library">
-              <label for="search" class="sr-only">Search</label>
-              <div class="search-container">
-                <input type="text" id="search" name="search" placeholder="Search..." />
-                <button type="submit" class="search" aria-label="Submit search">
-                  <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
-                </button>
-              </div>
-            </form>
-          </section>
-    
-          <!-- Recommended Section -->
-          <h2>Recommended for you:</h2>
-          <section class="swiper-container" aria-label="Recommended Meditation Tracks">
-            <div class="flexslider">
-                <ul class="slides">
-                     <li>
-                         <div class="slide1" tabindex="0">
-                            <img src="assets/img/beach.jpg" alt="Beach at sunset" class="video__img" />
-                            <a href="beach.html" class="play__btn" aria-label="Play Beach Serenade"></a>
-                            <h3 class="video__title">Beach Serenade</h3>
-                            <span class="video__description">Meditation</span>
-                         </div>
-                     </li>
-                     <li>
-                         <div class="slide2" tabindex="0">
-                            <img src="assets/img/leaves.jpg" alt="Plants with rain droplets" class="video__img" />
-                            <a href="rain.html" class="play__btn" aria-label="Play Stormy Serenade"></a>
-                            <h3 class="video__title">Stormy Serenade</h3>
-                            <span class="video__description">Meditation</span>
-                         </div>
-                     </li>
-                     <li>
-                         <div class="slide3" tabindex="0">
-                            <img src="assets/img/coffee.jpg" alt="Coffee cup with latte art" class="video__img" />
-                            <a href="jazz.html" class="play__btn" aria-label="Play Jazz Serenade"></a>
-                            <h3 class="video__title">Jazz Serenade</h3>
-                            <span class="video__description">Meditation</span>
-                         </div>
-                     </li>
-                     <li>
-                         <div class="slide4" tabindex="0">
-                            <img src="assets/img/natureserenade.jpg" alt="Peaceful forest with sunlight" class="video__img" />
-                            <a href="forest.html" class="play__btn" aria-label="Play Forest Serenade"></a>
-                            <h3 class="video__title">Nature's Serenade</h3>
-                            <span class="video__description">Meditation</span>
-                         </div>
-                     </li>
-                </ul>
-             </div>
-          </section>
-    
-          <!-- Affirmation Section -->
-          <section class="affirmation_container">
-            <h2>Daily Affirmation</h2>
-            <div class="affirmation">
-              <div class="video__wrapper">
-                <h2 class="playlist">I AM Playlist</h2>
-                <h4 class="playlist_para">Morning Playlist | 20 min</h4>
-                <a href="#" class="playbtn2" aria-label="Play I AM Playlist"></a>
-              </div>
-            </div>
-          </section>
-        </div>
-      </main>   
-</body>
+</body>  
 </html>

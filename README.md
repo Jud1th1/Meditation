@@ -14,11 +14,11 @@
 
 ## Overview
 
-The Serenity Now App is a meditation and relaxation application that provides users with a selection of ambient sounds and calming visuals for a serene and immersive experience. The app is designed to offer a simple and intuitive interface, allowing users to choose from a curated playlist of 10-minute meditation sessions, each accompanied by a soothing background video and calming background music.
+Serenity Now is a calming, mobile-first meditation app that provides a curated selection of 10-minute sessions. Each session pairs immersive background videos with soft ambient soundtracks, helping users unwind through a clean and focused interface. The app is optimized for accessibility and responsive performance across all devices.
 
 ### The challenge
 
-The primary challenge of this project was to create a mobile-friendly application that delivers a seamless user experience. Integrating both video and audio elements posed unique challenges in terms of performance optimization, ensuring fast loading times, and maintaining a visually appealing design across various devices.
+Building an app that combines HTML5 video, audio, and JavaScript timers in a seamless way — all while maintaining performance, responsiveness, and accessibility. Ensuring media loaded efficiently and that users could easily control their experience (start, pause, reset, switch durations) across multiple themed pages was key.
 
 ### Screenshot
 
@@ -26,12 +26,12 @@ The primary challenge of this project was to create a mobile-friendly applicatio
 
 ### Links
 
-- Solution URL: https://github.com/Jud1th1/meditation-
-- Live Site URL: https://serenity-now.netlify.app/
+- Solution URL: https://github.com/Jud1th1/Meditation [https://github.com/Jud1th1/Meditation]
+- Live Site URL: https://serenitynowmeditate.netlify.app/ [https://serenitynowmeditate.netlify.app/]
 
 ## My process
 
-1. **Conceptualization**: I defined the concept and core features of the Serenity Now App, based on a few clock tutorials I followed online. I wanted to take what I learned and amplify it by creating a meditation app focusing on simplicity, ease of use, and an immersive meditation experience.
+1. **Conceptualization**: Inspired by JavaScript clock and timer tutorials, I reimagined the concept into a mood-focused meditation app with a tranquil, aesthetic-first approach.
 
 2. **Design and Styling**: I created a clean and visually pleasing design, incorporating a responsive layout to ensure an optimal experience on mobile devices. This project served as an opportunity to use a pure css image I made for the intro screen.
 
